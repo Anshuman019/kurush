@@ -10,7 +10,7 @@ export default function Contact() {
       </p>
 
       <div className="contact-icons">
-        <a href="https://www.instagram.com/kurush.home?igsh=YmtueHc5NGRoMnVr" target="_blank" rel="noreferrer">
+        <a href="https://www.instagram.com/kurush.home/" target="_blank" rel="noreferrer">
           <FaInstagram /> Instagram
         </a>
 
