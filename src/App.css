@@ -141,13 +141,29 @@ body {
   color: #b08968;
 }
 
-/* ---------------- THREE BACKGROUND ---------------- */
-
-.three-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
+.section p {
+  max-width: 650px;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #6a4a35;
+  margin-bottom: 18px;
 }
+
+.section .subtitle {
+  font-style: italic;
+  color: #8a6a4f;
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+}
+
+.section h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #4b2e1f;
+  letter-spacing: 1px;
+}
+
 
 /* ---------------- MOBILE RESPONSIVE ---------------- */
 
@@ -182,4 +198,11 @@ body {
   .contact-icons a {
     font-size: 16px;
   }
+}
+/* Offset for fixed navbar when using anchor links */
+#hero,
+#about,
+#product,
+#contact {
+  scroll-margin-top: 90px; /* slightly more than navbar height */
 }
