@@ -15,11 +15,11 @@ export default function Contact() {
         </a>
 
         <a href="mailto:kurush.em@gmail.com">
-          <FaEnvelope /> kurush.em@gmail.com
+          <FaEnvelope /> Gmail
         </a>
 
         <a href="tel:+91 6363 321 115">
-          <FaPhone /> +91 6363 321 115
+          <FaPhone /> Contact 
         </a>
       </div>
     </section>
