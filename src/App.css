@@ -1,38 +1,185 @@
-.App {
-  text-align: center;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Georgia", serif;
+  background: linear-gradient(to bottom, #f6efe7, #efe1d1);
+  color: #4b2e1f;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ---------------- NAVBAR ---------------- */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(246, 239, 231, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+/* Logo left */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #b08968;
+}
+
+/* Links right */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4b2e1f;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #b08968;
+}
+
+/* ---------------- PAGE LAYOUT ---------------- */
+
+.main-container {
+  margin-top: 80px; /* same as navbar height */
+}
+
+/* Every section occupies exactly one screen */
+.hero,
+.section {
+  height: calc(100vh - 80px);
+  width: 100%;
+  scroll-snap-align: start;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* ---------------- HERO ---------------- */
+
+.hero h1 {
+  font-size: 3.8rem;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+  color: #4b2e1f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero p {
+  max-width: 500px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #7a5a44;
+}
+
+/* ---------------- SECTIONS ---------------- */
+
+.section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #4b2e1f;
+}
+
+.section p {
+  max-width: 600px;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #6a4a35;
+}
+
+/* ---------------- CONTACT ---------------- */
+
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: #4b2e1f;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: #b08968;
+}
+
+/* ---------------- THREE BACKGROUND ---------------- */
+
+.three-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+}
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+
+@media (max-width: 768px) {
+  .nav-logo {
+    width: 52px;
+    height: 52px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .hero p,
+  .section p {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .contact-icons a {
+    font-size: 16px;
   }
 }
